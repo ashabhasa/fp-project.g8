@@ -7,7 +7,7 @@ lazy val root = (project in file("."))
     version := "0.0.1-SNAPSHOT",
     scalaVersion := "$scala_version$",
     libraryDependencies ++= Seq(
-      miniTest % Test,
+      miniTest,
       spec,
       pureconfig
     ) ++ http4s ++ doobie,
