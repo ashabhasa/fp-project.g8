@@ -1,4 +1,4 @@
-import sbt._
+
 
 object Dependencies {
 
@@ -11,7 +11,7 @@ object Dependencies {
   lazy val spec = "org.specs2" %% "specs2-core" % Specs2Version % "test"
   lazy val pureconfig = "com.github.pureconfig" %% "pureconfig" % PureconfigVersion
 
-  val http4s = {
+  val http4s: Seq[ModuleID] = {
     Seq(
       "org.http4s" %% "http4s-core"         % Http4sVersion,
       "org.http4s" %% "http4s-blaze-server" % Http4sVersion,
@@ -21,7 +21,7 @@ object Dependencies {
     )
   }
 
-  val doobie = {
+  val doobie: Seq[ModuleID] = {
 
     Seq(
         "org.tpolecat" %% "doobie-core"      % DoobieVersion
